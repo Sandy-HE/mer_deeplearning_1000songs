@@ -1,8 +1,8 @@
 #!/bin/bash
 start=0
-end=4
-export model=base
-export CUDA_VISIBLE_DEVICES=1
+end=9
+export model=my
+export CUDA_VISIBLE_DEVICES=0
 for i in $(eval echo {$start..$end}); do
 export fold=$i
 python train.py
