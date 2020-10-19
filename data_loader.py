@@ -3,8 +3,9 @@ import glob
 import os
 import math
 import librosa
+from common import *
 
-n_fold = 70
+n_fold = 74
 
 # load npz files including raw audio samples and annotations
 def _load_file(npz_f):
@@ -92,7 +93,7 @@ def trans_angle_len(data):
 # partition data for k-fold cross validation
 def load_split(fold_idx):
     assert 10 > fold_idx >= 0
-    path = os.getenv('data_path', '../reg_data/*.npz')
+    path = os.getenv('data_path', '../data/*.npz')
     files = sorted(glob.glob(path))
     test_f = files[fold_idx*n_fold:(fold_idx+1)*n_fold]
     if fold_idx < 9:
@@ -114,7 +115,12 @@ def load_split(fold_idx):
     for f in sorted(test_f):
         print(f)
 
-    x_train, y_train = _load_data_augment(train_f)
+    if my:
+        print("my model use data augmentation")
+        x_train, y_train = _load_data_augment(train_f)
+    else:
+        print("base model: no data augmentation")
+        x_train, y_train = _load_data(train_f)
     x_test, y_test = _load_data(test_f)
     x_valid, y_valid = _load_data(valid_f)
 
@@ -123,7 +129,7 @@ def load_split(fold_idx):
 
 def load_split_for_test(fold_idx):
     assert 10 > fold_idx >= 0
-    path = os.getenv('data_path', '../reg_data/*.npz')
+    path = os.getenv('data_path', '../data/*.npz')
     files = sorted(glob.glob(path))
     test_f = files[fold_idx*n_fold:(fold_idx+1)*n_fold]
 
