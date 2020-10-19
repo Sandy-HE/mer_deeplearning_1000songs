@@ -5,13 +5,14 @@ from sklearn.metrics import r2_score, mean_squared_error
 EPOCHS = 200
 BATCH_SIZE = 32
 LR = 1e-3
-
+my = 1
 
 if os.getenv('model') == 'my':
     from my_model import model, ckpt_pattern
     print('using my model')
 elif os.getenv('model') == 'base':
     from base_model import model, ckpt_pattern
+    my = 0
     print('using base model')
 else:
     raise ValueError('Need to specify model!')
