@@ -1,0 +1,2054 @@
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 13:19:24.156004: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 13:19:24.264428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 13:19:24.264797: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:19:24.266818: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:19:24.268631: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 13:19:24.269182: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 13:19:24.271611: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 13:19:24.273722: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 13:19:24.289777: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 13:19:24.296155: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 13:19:24.296527: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 13:19:24.353644: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 13:19:24.354473: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55d3c124d0b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 13:19:24.354514: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 13:19:24.357834: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 13:19:24.357925: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:19:24.357940: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:19:24.357952: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 13:19:24.357964: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 13:19:24.357976: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 13:19:24.357988: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 13:19:24.358000: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 13:19:24.361153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 13:19:24.361235: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:19:24.609792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 13:19:24.609848: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 13:19:24.609857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 13:19:24.614318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 13:19:24.619675: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55d3c5ad53b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 13:19:24.619722: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 13:19:28.312985: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:19:28.605703: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  0
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 71s - loss: 0.1581 - mse: 0.0565 - val_loss: 0.0549 - val_mse: 0.0546
+
+Epoch 00001: val_mse improved from inf to 0.05459, saving model to fold_0_my.hdf5
+Epoch 2/200
+ - 67s - loss: 0.0584 - mse: 0.0534 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00002: val_mse improved from 0.05459 to 0.04680, saving model to fold_0_my.hdf5
+Epoch 3/200
+ - 68s - loss: 0.0538 - mse: 0.0519 - val_loss: 0.0482 - val_mse: 0.0482
+
+Epoch 00003: val_mse did not improve from 0.04680
+Epoch 4/200
+ - 68s - loss: 0.0519 - mse: 0.0512 - val_loss: 0.0464 - val_mse: 0.0464
+
+Epoch 00004: val_mse improved from 0.04680 to 0.04638, saving model to fold_0_my.hdf5
+Epoch 5/200
+ - 68s - loss: 0.0511 - mse: 0.0508 - val_loss: 0.0685 - val_mse: 0.0685
+
+Epoch 00005: val_mse did not improve from 0.04638
+Epoch 6/200
+ - 68s - loss: 0.0499 - mse: 0.0498 - val_loss: 0.0440 - val_mse: 0.0440
+
+Epoch 00006: val_mse improved from 0.04638 to 0.04404, saving model to fold_0_my.hdf5
+Epoch 7/200
+ - 70s - loss: 0.0486 - mse: 0.0486 - val_loss: 0.0435 - val_mse: 0.0435
+
+Epoch 00007: val_mse improved from 0.04404 to 0.04348, saving model to fold_0_my.hdf5
+Epoch 8/200
+ - 68s - loss: 0.0506 - mse: 0.0506 - val_loss: 0.0450 - val_mse: 0.0450
+
+Epoch 00008: val_mse did not improve from 0.04348
+Epoch 9/200
+ - 67s - loss: 0.0488 - mse: 0.0488 - val_loss: 0.0445 - val_mse: 0.0445
+
+Epoch 00009: val_mse did not improve from 0.04348
+Epoch 10/200
+ - 67s - loss: 0.0472 - mse: 0.0472 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00010: val_mse did not improve from 0.04348
+Epoch 11/200
+ - 67s - loss: 0.0468 - mse: 0.0468 - val_loss: 0.0427 - val_mse: 0.0427
+
+Epoch 00011: val_mse improved from 0.04348 to 0.04270, saving model to fold_0_my.hdf5
+Epoch 12/200
+ - 68s - loss: 0.0465 - mse: 0.0465 - val_loss: 0.0420 - val_mse: 0.0420
+
+Epoch 00012: val_mse improved from 0.04270 to 0.04203, saving model to fold_0_my.hdf5
+Epoch 13/200
+ - 68s - loss: 0.0447 - mse: 0.0447 - val_loss: 0.0419 - val_mse: 0.0419
+
+Epoch 00013: val_mse improved from 0.04203 to 0.04185, saving model to fold_0_my.hdf5
+Epoch 14/200
+ - 68s - loss: 0.0438 - mse: 0.0438 - val_loss: 0.0394 - val_mse: 0.0394
+
+Epoch 00014: val_mse improved from 0.04185 to 0.03938, saving model to fold_0_my.hdf5
+Epoch 15/200
+ - 68s - loss: 0.0430 - mse: 0.0430 - val_loss: 0.0425 - val_mse: 0.0425
+
+Epoch 00015: val_mse did not improve from 0.03938
+Epoch 16/200
+ - 67s - loss: 0.0423 - mse: 0.0423 - val_loss: 0.0401 - val_mse: 0.0401
+
+Epoch 00016: val_mse did not improve from 0.03938
+Epoch 17/200
+ - 70s - loss: 0.0421 - mse: 0.0421 - val_loss: 0.0409 - val_mse: 0.0409
+
+Epoch 00017: val_mse did not improve from 0.03938
+Epoch 18/200
+ - 67s - loss: 0.0410 - mse: 0.0410 - val_loss: 0.0416 - val_mse: 0.0416
+
+Epoch 00018: val_mse did not improve from 0.03938
+Epoch 19/200
+ - 67s - loss: 0.0406 - mse: 0.0406 - val_loss: 0.0421 - val_mse: 0.0421
+
+Epoch 00019: val_mse did not improve from 0.03938
+Epoch 20/200
+ - 68s - loss: 0.0399 - mse: 0.0399 - val_loss: 0.0407 - val_mse: 0.0407
+
+Epoch 00020: val_mse did not improve from 0.03938
+Epoch 21/200
+ - 67s - loss: 0.0396 - mse: 0.0396 - val_loss: 0.0404 - val_mse: 0.0404
+
+Epoch 00021: val_mse did not improve from 0.03938
+Epoch 22/200
+ - 64s - loss: 0.0391 - mse: 0.0391 - val_loss: 0.0413 - val_mse: 0.0413
+
+Epoch 00022: val_mse did not improve from 0.03938
+Epoch 23/200
+ - 59s - loss: 0.0388 - mse: 0.0388 - val_loss: 0.0391 - val_mse: 0.0391
+
+Epoch 00023: val_mse improved from 0.03938 to 0.03907, saving model to fold_0_my.hdf5
+Epoch 24/200
+ - 60s - loss: 0.0382 - mse: 0.0382 - val_loss: 0.0393 - val_mse: 0.0393
+
+Epoch 00024: val_mse did not improve from 0.03907
+Epoch 25/200
+ - 59s - loss: 0.0379 - mse: 0.0379 - val_loss: 0.0420 - val_mse: 0.0420
+
+Epoch 00025: val_mse did not improve from 0.03907
+Epoch 26/200
+ - 59s - loss: 0.0374 - mse: 0.0374 - val_loss: 0.0386 - val_mse: 0.0386
+
+Epoch 00026: val_mse improved from 0.03907 to 0.03860, saving model to fold_0_my.hdf5
+Epoch 27/200
+ - 59s - loss: 0.0372 - mse: 0.0372 - val_loss: 0.0396 - val_mse: 0.0396
+
+Epoch 00027: val_mse did not improve from 0.03860
+Epoch 28/200
+ - 61s - loss: 0.0367 - mse: 0.0367 - val_loss: 0.0403 - val_mse: 0.0403
+
+Epoch 00028: val_mse did not improve from 0.03860
+Epoch 29/200
+ - 60s - loss: 0.0367 - mse: 0.0367 - val_loss: 0.0401 - val_mse: 0.0401
+
+Epoch 00029: val_mse did not improve from 0.03860
+Epoch 30/200
+ - 59s - loss: 0.0363 - mse: 0.0363 - val_loss: 0.0440 - val_mse: 0.0440
+
+Epoch 00030: val_mse did not improve from 0.03860
+Epoch 31/200
+ - 60s - loss: 0.0361 - mse: 0.0361 - val_loss: 0.0417 - val_mse: 0.0417
+
+Epoch 00031: val_mse did not improve from 0.03860
+Epoch 32/200
+ - 59s - loss: 0.0357 - mse: 0.0357 - val_loss: 0.0414 - val_mse: 0.0414
+
+Epoch 00032: val_mse did not improve from 0.03860
+Epoch 33/200
+ - 59s - loss: 0.0355 - mse: 0.0355 - val_loss: 0.0401 - val_mse: 0.0401
+
+Epoch 00033: val_mse did not improve from 0.03860
+Epoch 34/200
+ - 59s - loss: 0.0353 - mse: 0.0353 - val_loss: 0.0405 - val_mse: 0.0405
+
+Epoch 00034: val_mse did not improve from 0.03860
+Epoch 35/200
+ - 59s - loss: 0.0350 - mse: 0.0350 - val_loss: 0.0444 - val_mse: 0.0444
+
+Epoch 00035: val_mse did not improve from 0.03860
+Epoch 36/200
+ - 60s - loss: 0.0350 - mse: 0.0350 - val_loss: 0.0400 - val_mse: 0.0400
+Restoring model weights from the end of the best epoch
+
+Epoch 00036: val_mse did not improve from 0.03860
+Epoch 00036: early stopping
+r2_arousal:  0.39365191711111736
+r2_valence:  0.15120196992024837
+r2_overall:  0.2724269435156836
+mse_arousal:  0.045189207341427215
+mse_valence:  0.04790738183698863
+mse_overall:  0.0465482945892079
+rmse_arousal:  0.2125775325414876
+rmse_valence:  0.21887754986975852
+rmse_overall:  0.21575053786539652
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 13:58:30.269487: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 13:58:30.347076: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 13:58:30.347382: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:58:30.349057: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:58:30.350538: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 13:58:30.350934: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 13:58:30.352884: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 13:58:30.354390: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 13:58:30.363773: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 13:58:30.368342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 13:58:30.368810: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 13:58:30.397765: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 13:58:30.398529: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5583daf370b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 13:58:30.398556: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 13:58:30.400046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 13:58:30.400094: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:58:30.400103: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:58:30.400111: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 13:58:30.400119: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 13:58:30.400127: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 13:58:30.400135: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 13:58:30.400142: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 13:58:30.402720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 13:58:30.402752: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 13:58:30.534321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 13:58:30.534358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 13:58:30.534364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 13:58:30.540545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 13:58:30.541944: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5583df7bf140 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 13:58:30.541965: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 13:58:33.113475: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 13:58:33.413789: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  1
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 62s - loss: 0.1489 - mse: 0.0560 - val_loss: 0.0537 - val_mse: 0.0519
+
+Epoch 00001: val_mse improved from inf to 0.05187, saving model to fold_1_my.hdf5
+Epoch 2/200
+ - 58s - loss: 0.0578 - mse: 0.0525 - val_loss: 0.0528 - val_mse: 0.0524
+
+Epoch 00002: val_mse did not improve from 0.05187
+Epoch 3/200
+ - 60s - loss: 0.0526 - mse: 0.0507 - val_loss: 0.0522 - val_mse: 0.0521
+
+Epoch 00003: val_mse did not improve from 0.05187
+Epoch 4/200
+ - 59s - loss: 0.0505 - mse: 0.0497 - val_loss: 0.0542 - val_mse: 0.0541
+
+Epoch 00004: val_mse did not improve from 0.05187
+Epoch 5/200
+ - 59s - loss: 0.0491 - mse: 0.0488 - val_loss: 0.0493 - val_mse: 0.0493
+
+Epoch 00005: val_mse improved from 0.05187 to 0.04925, saving model to fold_1_my.hdf5
+Epoch 6/200
+ - 59s - loss: 0.0480 - mse: 0.0479 - val_loss: 0.0520 - val_mse: 0.0519
+
+Epoch 00006: val_mse did not improve from 0.04925
+Epoch 7/200
+ - 59s - loss: 0.0472 - mse: 0.0471 - val_loss: 0.0497 - val_mse: 0.0496
+
+Epoch 00007: val_mse did not improve from 0.04925
+Epoch 8/200
+ - 59s - loss: 0.0466 - mse: 0.0466 - val_loss: 0.0483 - val_mse: 0.0482
+
+Epoch 00008: val_mse improved from 0.04925 to 0.04816, saving model to fold_1_my.hdf5
+Epoch 9/200
+ - 59s - loss: 0.0465 - mse: 0.0464 - val_loss: 0.0499 - val_mse: 0.0499
+
+Epoch 00009: val_mse did not improve from 0.04816
+Epoch 10/200
+ - 59s - loss: 0.0446 - mse: 0.0445 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00010: val_mse did not improve from 0.04816
+Epoch 11/200
+ - 59s - loss: 0.0437 - mse: 0.0437 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00011: val_mse improved from 0.04816 to 0.04713, saving model to fold_1_my.hdf5
+Epoch 12/200
+ - 60s - loss: 0.0429 - mse: 0.0429 - val_loss: 0.0465 - val_mse: 0.0465
+
+Epoch 00012: val_mse improved from 0.04713 to 0.04651, saving model to fold_1_my.hdf5
+Epoch 13/200
+ - 59s - loss: 0.0423 - mse: 0.0423 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00013: val_mse did not improve from 0.04651
+Epoch 14/200
+ - 60s - loss: 0.0418 - mse: 0.0417 - val_loss: 0.0467 - val_mse: 0.0466
+
+Epoch 00014: val_mse did not improve from 0.04651
+Epoch 15/200
+ - 59s - loss: 0.0407 - mse: 0.0407 - val_loss: 0.0477 - val_mse: 0.0476
+
+Epoch 00015: val_mse did not improve from 0.04651
+Epoch 16/200
+ - 59s - loss: 0.0402 - mse: 0.0402 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00016: val_mse did not improve from 0.04651
+Epoch 17/200
+ - 59s - loss: 0.0397 - mse: 0.0397 - val_loss: 0.0501 - val_mse: 0.0501
+
+Epoch 00017: val_mse did not improve from 0.04651
+Epoch 18/200
+ - 59s - loss: 0.0395 - mse: 0.0395 - val_loss: 0.0466 - val_mse: 0.0466
+
+Epoch 00018: val_mse did not improve from 0.04651
+Epoch 19/200
+ - 60s - loss: 0.0390 - mse: 0.0390 - val_loss: 0.0501 - val_mse: 0.0501
+
+Epoch 00019: val_mse did not improve from 0.04651
+Epoch 20/200
+ - 60s - loss: 0.0385 - mse: 0.0384 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00020: val_mse did not improve from 0.04651
+Epoch 21/200
+ - 59s - loss: 0.0381 - mse: 0.0381 - val_loss: 0.0455 - val_mse: 0.0455
+
+Epoch 00021: val_mse improved from 0.04651 to 0.04550, saving model to fold_1_my.hdf5
+Epoch 22/200
+ - 60s - loss: 0.0380 - mse: 0.0379 - val_loss: 0.0488 - val_mse: 0.0488
+
+Epoch 00022: val_mse did not improve from 0.04550
+Epoch 23/200
+ - 59s - loss: 0.0375 - mse: 0.0375 - val_loss: 0.0476 - val_mse: 0.0476
+
+Epoch 00023: val_mse did not improve from 0.04550
+Epoch 24/200
+ - 59s - loss: 0.0371 - mse: 0.0371 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00024: val_mse did not improve from 0.04550
+Epoch 25/200
+ - 60s - loss: 0.0368 - mse: 0.0368 - val_loss: 0.0478 - val_mse: 0.0477
+
+Epoch 00025: val_mse did not improve from 0.04550
+Epoch 26/200
+ - 59s - loss: 0.0366 - mse: 0.0366 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00026: val_mse did not improve from 0.04550
+Epoch 27/200
+ - 59s - loss: 0.0364 - mse: 0.0364 - val_loss: 0.0493 - val_mse: 0.0493
+
+Epoch 00027: val_mse did not improve from 0.04550
+Epoch 28/200
+ - 60s - loss: 0.0360 - mse: 0.0360 - val_loss: 0.0508 - val_mse: 0.0507
+
+Epoch 00028: val_mse did not improve from 0.04550
+Epoch 29/200
+ - 59s - loss: 0.0358 - mse: 0.0358 - val_loss: 0.0472 - val_mse: 0.0472
+
+Epoch 00029: val_mse did not improve from 0.04550
+Epoch 30/200
+ - 59s - loss: 0.0352 - mse: 0.0352 - val_loss: 0.0531 - val_mse: 0.0531
+
+Epoch 00030: val_mse did not improve from 0.04550
+Epoch 31/200
+ - 59s - loss: 0.0358 - mse: 0.0358 - val_loss: 0.0470 - val_mse: 0.0470
+Restoring model weights from the end of the best epoch
+
+Epoch 00031: val_mse did not improve from 0.04550
+Epoch 00031: early stopping
+r2_arousal:  0.44776390430573365
+r2_valence:  0.18400966868481639
+r2_overall:  0.31588678649527613
+mse_arousal:  0.03473724661972718
+mse_valence:  0.042404021052090526
+mse_overall:  0.03857063383590877
+rmse_arousal:  0.18637930845382805
+rmse_valence:  0.20592236656587484
+rmse_overall:  0.1963940779043726
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 14:29:29.748427: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 14:29:29.862300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 14:29:29.862638: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:29:29.864368: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:29:29.865899: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 14:29:29.866301: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 14:29:29.868292: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 14:29:29.869842: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 14:29:29.881875: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 14:29:29.885600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 14:29:29.885933: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 14:29:29.917646: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 14:29:29.918883: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557a5b4e60b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 14:29:29.918924: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 14:29:29.928331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 14:29:29.928411: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:29:29.928435: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:29:29.928455: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 14:29:29.928475: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 14:29:29.928495: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 14:29:29.928515: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 14:29:29.928535: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 14:29:29.932694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 14:29:29.932752: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:29:30.061875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 14:29:30.061928: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 14:29:30.061935: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 14:29:30.074637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 14:29:30.076143: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557a5fd6e940 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 14:29:30.076164: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 14:29:32.802672: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:29:33.026469: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  2
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 61s - loss: 0.1745 - mse: 0.0534 - val_loss: 0.0529 - val_mse: 0.0508
+
+Epoch 00001: val_mse improved from inf to 0.05078, saving model to fold_2_my.hdf5
+Epoch 2/200
+ - 60s - loss: 0.0532 - mse: 0.0497 - val_loss: 0.0519 - val_mse: 0.0516
+
+Epoch 00002: val_mse did not improve from 0.05078
+Epoch 3/200
+ - 59s - loss: 0.0510 - mse: 0.0497 - val_loss: 0.0529 - val_mse: 0.0528
+
+Epoch 00003: val_mse did not improve from 0.05078
+Epoch 4/200
+ - 60s - loss: 0.0479 - mse: 0.0473 - val_loss: 0.0497 - val_mse: 0.0497
+
+Epoch 00004: val_mse improved from 0.05078 to 0.04966, saving model to fold_2_my.hdf5
+Epoch 5/200
+ - 61s - loss: 0.0476 - mse: 0.0473 - val_loss: 0.0552 - val_mse: 0.0552
+
+Epoch 00005: val_mse did not improve from 0.04966
+Epoch 6/200
+ - 60s - loss: 0.0484 - mse: 0.0483 - val_loss: 0.0487 - val_mse: 0.0487
+
+Epoch 00006: val_mse improved from 0.04966 to 0.04872, saving model to fold_2_my.hdf5
+Epoch 7/200
+ - 60s - loss: 0.0468 - mse: 0.0468 - val_loss: 0.0583 - val_mse: 0.0581
+
+Epoch 00007: val_mse did not improve from 0.04872
+Epoch 8/200
+ - 60s - loss: 0.0484 - mse: 0.0483 - val_loss: 0.0482 - val_mse: 0.0482
+
+Epoch 00008: val_mse improved from 0.04872 to 0.04824, saving model to fold_2_my.hdf5
+Epoch 9/200
+ - 59s - loss: 0.0444 - mse: 0.0444 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00009: val_mse improved from 0.04824 to 0.04738, saving model to fold_2_my.hdf5
+Epoch 10/200
+ - 60s - loss: 0.0440 - mse: 0.0440 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00010: val_mse did not improve from 0.04738
+Epoch 11/200
+ - 59s - loss: 0.0426 - mse: 0.0426 - val_loss: 0.0459 - val_mse: 0.0459
+
+Epoch 00011: val_mse improved from 0.04738 to 0.04591, saving model to fold_2_my.hdf5
+Epoch 12/200
+ - 59s - loss: 0.0425 - mse: 0.0425 - val_loss: 0.0460 - val_mse: 0.0460
+
+Epoch 00012: val_mse did not improve from 0.04591
+Epoch 13/200
+ - 59s - loss: 0.0411 - mse: 0.0411 - val_loss: 0.0455 - val_mse: 0.0455
+
+Epoch 00013: val_mse improved from 0.04591 to 0.04546, saving model to fold_2_my.hdf5
+Epoch 14/200
+ - 59s - loss: 0.0404 - mse: 0.0404 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00014: val_mse did not improve from 0.04546
+Epoch 15/200
+ - 59s - loss: 0.0400 - mse: 0.0399 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00015: val_mse did not improve from 0.04546
+Epoch 16/200
+ - 58s - loss: 0.0397 - mse: 0.0396 - val_loss: 0.0470 - val_mse: 0.0470
+
+Epoch 00016: val_mse did not improve from 0.04546
+Epoch 17/200
+ - 61s - loss: 0.0393 - mse: 0.0393 - val_loss: 0.0464 - val_mse: 0.0464
+
+Epoch 00017: val_mse did not improve from 0.04546
+Epoch 18/200
+ - 59s - loss: 0.0381 - mse: 0.0381 - val_loss: 0.0448 - val_mse: 0.0448
+
+Epoch 00018: val_mse improved from 0.04546 to 0.04476, saving model to fold_2_my.hdf5
+Epoch 19/200
+ - 60s - loss: 0.0373 - mse: 0.0373 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00019: val_mse did not improve from 0.04476
+Epoch 20/200
+ - 59s - loss: 0.0372 - mse: 0.0371 - val_loss: 0.0474 - val_mse: 0.0473
+
+Epoch 00020: val_mse did not improve from 0.04476
+Epoch 21/200
+ - 60s - loss: 0.0367 - mse: 0.0367 - val_loss: 0.0459 - val_mse: 0.0459
+
+Epoch 00021: val_mse did not improve from 0.04476
+Epoch 22/200
+ - 60s - loss: 0.0363 - mse: 0.0362 - val_loss: 0.0458 - val_mse: 0.0458
+
+Epoch 00022: val_mse did not improve from 0.04476
+Epoch 23/200
+ - 61s - loss: 0.0366 - mse: 0.0366 - val_loss: 0.0462 - val_mse: 0.0462
+
+Epoch 00023: val_mse did not improve from 0.04476
+Epoch 24/200
+ - 60s - loss: 0.0356 - mse: 0.0355 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00024: val_mse did not improve from 0.04476
+Epoch 25/200
+ - 61s - loss: 0.0352 - mse: 0.0351 - val_loss: 0.0465 - val_mse: 0.0465
+
+Epoch 00025: val_mse did not improve from 0.04476
+Epoch 26/200
+ - 60s - loss: 0.0349 - mse: 0.0348 - val_loss: 0.0477 - val_mse: 0.0476
+
+Epoch 00026: val_mse did not improve from 0.04476
+Epoch 27/200
+ - 61s - loss: 0.0344 - mse: 0.0343 - val_loss: 0.0461 - val_mse: 0.0460
+
+Epoch 00027: val_mse did not improve from 0.04476
+Epoch 28/200
+ - 62s - loss: 0.0344 - mse: 0.0344 - val_loss: 0.0448 - val_mse: 0.0448
+Restoring model weights from the end of the best epoch
+
+Epoch 00028: val_mse did not improve from 0.04476
+Epoch 00028: early stopping
+r2_arousal:  0.2060891335303432
+r2_valence:  -0.14517326783862305
+r2_overall:  0.030457932845860236
+mse_arousal:  0.06567638137979799
+mse_valence:  0.07501611024822127
+mse_overall:  0.07034624581400957
+rmse_arousal:  0.25627403571138063
+rmse_valence:  0.2738906903277679
+rmse_overall:  0.26522866702905545
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 14:57:45.858144: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 14:57:45.887892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 14:57:45.888111: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:57:45.889220: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:57:45.890226: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 14:57:45.890502: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 14:57:45.891765: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 14:57:45.892728: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 14:57:45.895565: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 14:57:45.898285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 14:57:45.898621: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 14:57:45.925795: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 14:57:45.927608: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5625b5b660b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 14:57:45.927658: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 14:57:45.929665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 14:57:45.929751: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:57:45.929768: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:57:45.929797: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 14:57:45.929812: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 14:57:45.929826: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 14:57:45.929840: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 14:57:45.929854: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 14:57:45.933507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 14:57:45.933583: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 14:57:46.048804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 14:57:46.048843: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 14:57:46.048853: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 14:57:46.061054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 14:57:46.062525: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5625ba3eeda0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 14:57:46.062551: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 14:57:48.836122: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 14:57:49.035802: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  3
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 62s - loss: 0.1056 - mse: 0.0566 - val_loss: 0.0540 - val_mse: 0.0530
+
+Epoch 00001: val_mse improved from inf to 0.05303, saving model to fold_3_my.hdf5
+Epoch 2/200
+ - 61s - loss: 0.0566 - mse: 0.0530 - val_loss: 0.0523 - val_mse: 0.0521
+
+Epoch 00002: val_mse improved from 0.05303 to 0.05208, saving model to fold_3_my.hdf5
+Epoch 3/200
+ - 60s - loss: 0.0515 - mse: 0.0505 - val_loss: 0.0522 - val_mse: 0.0521
+
+Epoch 00003: val_mse did not improve from 0.05208
+Epoch 4/200
+ - 61s - loss: 0.0497 - mse: 0.0493 - val_loss: 0.0511 - val_mse: 0.0511
+
+Epoch 00004: val_mse improved from 0.05208 to 0.05110, saving model to fold_3_my.hdf5
+Epoch 5/200
+ - 60s - loss: 0.0497 - mse: 0.0495 - val_loss: 0.0532 - val_mse: 0.0531
+
+Epoch 00005: val_mse did not improve from 0.05110
+Epoch 6/200
+ - 61s - loss: 0.0500 - mse: 0.0499 - val_loss: 0.0504 - val_mse: 0.0504
+
+Epoch 00006: val_mse improved from 0.05110 to 0.05037, saving model to fold_3_my.hdf5
+Epoch 7/200
+ - 60s - loss: 0.0485 - mse: 0.0484 - val_loss: 0.0522 - val_mse: 0.0522
+
+Epoch 00007: val_mse did not improve from 0.05037
+Epoch 8/200
+ - 60s - loss: 0.0483 - mse: 0.0482 - val_loss: 0.0490 - val_mse: 0.0490
+
+Epoch 00008: val_mse improved from 0.05037 to 0.04895, saving model to fold_3_my.hdf5
+Epoch 9/200
+ - 61s - loss: 0.0470 - mse: 0.0470 - val_loss: 0.0568 - val_mse: 0.0568
+
+Epoch 00009: val_mse did not improve from 0.04895
+Epoch 10/200
+ - 59s - loss: 0.0452 - mse: 0.0452 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00010: val_mse improved from 0.04895 to 0.04829, saving model to fold_3_my.hdf5
+Epoch 11/200
+ - 63s - loss: 0.0441 - mse: 0.0441 - val_loss: 0.0464 - val_mse: 0.0464
+
+Epoch 00011: val_mse improved from 0.04829 to 0.04635, saving model to fold_3_my.hdf5
+Epoch 12/200
+ - 61s - loss: 0.0430 - mse: 0.0429 - val_loss: 0.0469 - val_mse: 0.0469
+
+Epoch 00012: val_mse did not improve from 0.04635
+Epoch 13/200
+ - 60s - loss: 0.0425 - mse: 0.0424 - val_loss: 0.0476 - val_mse: 0.0476
+
+Epoch 00013: val_mse did not improve from 0.04635
+Epoch 14/200
+ - 61s - loss: 0.0423 - mse: 0.0422 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00014: val_mse did not improve from 0.04635
+Epoch 15/200
+ - 60s - loss: 0.0433 - mse: 0.0432 - val_loss: 0.0473 - val_mse: 0.0473
+
+Epoch 00015: val_mse did not improve from 0.04635
+Epoch 16/200
+ - 59s - loss: 0.0428 - mse: 0.0427 - val_loss: 0.0472 - val_mse: 0.0472
+
+Epoch 00016: val_mse did not improve from 0.04635
+Epoch 17/200
+ - 59s - loss: 0.0411 - mse: 0.0410 - val_loss: 0.0460 - val_mse: 0.0459
+
+Epoch 00017: val_mse improved from 0.04635 to 0.04592, saving model to fold_3_my.hdf5
+Epoch 18/200
+ - 59s - loss: 0.0404 - mse: 0.0404 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00018: val_mse did not improve from 0.04592
+Epoch 19/200
+ - 59s - loss: 0.0397 - mse: 0.0397 - val_loss: 0.0463 - val_mse: 0.0463
+
+Epoch 00019: val_mse did not improve from 0.04592
+Epoch 20/200
+ - 60s - loss: 0.0392 - mse: 0.0392 - val_loss: 0.0473 - val_mse: 0.0473
+
+Epoch 00020: val_mse did not improve from 0.04592
+Epoch 21/200
+ - 59s - loss: 0.0400 - mse: 0.0400 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00021: val_mse did not improve from 0.04592
+Epoch 22/200
+ - 60s - loss: 0.0392 - mse: 0.0392 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00022: val_mse did not improve from 0.04592
+Epoch 23/200
+ - 59s - loss: 0.0385 - mse: 0.0384 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00023: val_mse did not improve from 0.04592
+Epoch 24/200
+ - 59s - loss: 0.0383 - mse: 0.0383 - val_loss: 0.0508 - val_mse: 0.0507
+
+Epoch 00024: val_mse did not improve from 0.04592
+Epoch 25/200
+ - 59s - loss: 0.0376 - mse: 0.0376 - val_loss: 0.0465 - val_mse: 0.0465
+
+Epoch 00025: val_mse did not improve from 0.04592
+Epoch 26/200
+ - 60s - loss: 0.0375 - mse: 0.0375 - val_loss: 0.0482 - val_mse: 0.0482
+
+Epoch 00026: val_mse did not improve from 0.04592
+Epoch 27/200
+ - 59s - loss: 0.0372 - mse: 0.0371 - val_loss: 0.0479 - val_mse: 0.0479
+Restoring model weights from the end of the best epoch
+
+Epoch 00027: val_mse did not improve from 0.04592
+Epoch 00027: early stopping
+r2_arousal:  0.5361110244677354
+r2_valence:  0.17013651433913857
+r2_overall:  0.3531237694034375
+mse_arousal:  0.04420787042361032
+mse_valence:  0.04683755617726932
+mse_overall:  0.04552271330043983
+rmse_arousal:  0.21025667747686475
+rmse_valence:  0.2164198608660243
+rmse_overall:  0.2133605242317328
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 15:25:06.522411: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 15:25:06.571140: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 15:25:06.571337: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:25:06.572426: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:25:06.573420: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 15:25:06.573696: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 15:25:06.574936: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 15:25:06.575894: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 15:25:06.578788: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 15:25:06.581532: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 15:25:06.581882: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 15:25:06.606941: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 15:25:06.610411: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f39406d0b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 15:25:06.610460: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 15:25:06.612800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 15:25:06.612886: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:25:06.612908: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:25:06.612928: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 15:25:06.612947: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 15:25:06.612966: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 15:25:06.612985: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 15:25:06.613005: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 15:25:06.620059: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 15:25:06.620105: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:25:06.790754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 15:25:06.790800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 15:25:06.790809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 15:25:06.796581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 15:25:06.798749: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f3988f5a20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 15:25:06.798782: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 15:25:09.123499: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:25:09.401148: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  4
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 62s - loss: 0.1589 - mse: 0.0569 - val_loss: 0.0575 - val_mse: 0.0553
+
+Epoch 00001: val_mse improved from inf to 0.05532, saving model to fold_4_my.hdf5
+Epoch 2/200
+ - 59s - loss: 0.0590 - mse: 0.0532 - val_loss: 0.0586 - val_mse: 0.0582
+
+Epoch 00002: val_mse did not improve from 0.05532
+Epoch 3/200
+ - 60s - loss: 0.0550 - mse: 0.0527 - val_loss: 0.0559 - val_mse: 0.0557
+
+Epoch 00003: val_mse did not improve from 0.05532
+Epoch 4/200
+ - 59s - loss: 0.0556 - mse: 0.0546 - val_loss: 0.0539 - val_mse: 0.0538
+
+Epoch 00004: val_mse improved from 0.05532 to 0.05380, saving model to fold_4_my.hdf5
+Epoch 5/200
+ - 59s - loss: 0.0516 - mse: 0.0513 - val_loss: 0.0526 - val_mse: 0.0525
+
+Epoch 00005: val_mse improved from 0.05380 to 0.05252, saving model to fold_4_my.hdf5
+Epoch 6/200
+ - 60s - loss: 0.0495 - mse: 0.0493 - val_loss: 0.0527 - val_mse: 0.0527
+
+Epoch 00006: val_mse did not improve from 0.05252
+Epoch 7/200
+ - 59s - loss: 0.0482 - mse: 0.0481 - val_loss: 0.0487 - val_mse: 0.0487
+
+Epoch 00007: val_mse improved from 0.05252 to 0.04868, saving model to fold_4_my.hdf5
+Epoch 8/200
+ - 60s - loss: 0.0470 - mse: 0.0470 - val_loss: 0.0503 - val_mse: 0.0502
+
+Epoch 00008: val_mse did not improve from 0.04868
+Epoch 9/200
+ - 59s - loss: 0.0474 - mse: 0.0474 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00009: val_mse improved from 0.04868 to 0.04831, saving model to fold_4_my.hdf5
+Epoch 10/200
+ - 59s - loss: 0.0443 - mse: 0.0443 - val_loss: 0.0509 - val_mse: 0.0508
+
+Epoch 00010: val_mse did not improve from 0.04831
+Epoch 11/200
+ - 58s - loss: 0.0434 - mse: 0.0434 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00011: val_mse did not improve from 0.04831
+Epoch 12/200
+ - 59s - loss: 0.0428 - mse: 0.0427 - val_loss: 0.0476 - val_mse: 0.0475
+
+Epoch 00012: val_mse improved from 0.04831 to 0.04754, saving model to fold_4_my.hdf5
+Epoch 13/200
+ - 59s - loss: 0.0421 - mse: 0.0421 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00013: val_mse did not improve from 0.04754
+Epoch 14/200
+ - 58s - loss: 0.0412 - mse: 0.0412 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00014: val_mse improved from 0.04754 to 0.04676, saving model to fold_4_my.hdf5
+Epoch 15/200
+ - 59s - loss: 0.0408 - mse: 0.0408 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00015: val_mse did not improve from 0.04676
+Epoch 16/200
+ - 59s - loss: 0.0405 - mse: 0.0405 - val_loss: 0.0478 - val_mse: 0.0477
+
+Epoch 00016: val_mse did not improve from 0.04676
+Epoch 17/200
+ - 61s - loss: 0.0399 - mse: 0.0399 - val_loss: 0.0475 - val_mse: 0.0474
+
+Epoch 00017: val_mse did not improve from 0.04676
+Epoch 18/200
+ - 58s - loss: 0.0397 - mse: 0.0397 - val_loss: 0.0472 - val_mse: 0.0471
+
+Epoch 00018: val_mse did not improve from 0.04676
+Epoch 19/200
+ - 58s - loss: 0.0392 - mse: 0.0392 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00019: val_mse did not improve from 0.04676
+Epoch 20/200
+ - 58s - loss: 0.0390 - mse: 0.0390 - val_loss: 0.0461 - val_mse: 0.0461
+
+Epoch 00020: val_mse improved from 0.04676 to 0.04610, saving model to fold_4_my.hdf5
+Epoch 21/200
+ - 59s - loss: 0.0384 - mse: 0.0384 - val_loss: 0.0462 - val_mse: 0.0461
+
+Epoch 00021: val_mse did not improve from 0.04610
+Epoch 22/200
+ - 59s - loss: 0.0382 - mse: 0.0382 - val_loss: 0.0456 - val_mse: 0.0456
+
+Epoch 00022: val_mse improved from 0.04610 to 0.04560, saving model to fold_4_my.hdf5
+Epoch 23/200
+ - 59s - loss: 0.0378 - mse: 0.0378 - val_loss: 0.0463 - val_mse: 0.0463
+
+Epoch 00023: val_mse did not improve from 0.04560
+Epoch 24/200
+ - 59s - loss: 0.0374 - mse: 0.0373 - val_loss: 0.0477 - val_mse: 0.0477
+
+Epoch 00024: val_mse did not improve from 0.04560
+Epoch 25/200
+ - 58s - loss: 0.0372 - mse: 0.0372 - val_loss: 0.0480 - val_mse: 0.0480
+
+Epoch 00025: val_mse did not improve from 0.04560
+Epoch 26/200
+ - 58s - loss: 0.0367 - mse: 0.0367 - val_loss: 0.0469 - val_mse: 0.0469
+
+Epoch 00026: val_mse did not improve from 0.04560
+Epoch 27/200
+ - 59s - loss: 0.0365 - mse: 0.0365 - val_loss: 0.0476 - val_mse: 0.0476
+
+Epoch 00027: val_mse did not improve from 0.04560
+Epoch 28/200
+ - 58s - loss: 0.0363 - mse: 0.0362 - val_loss: 0.0459 - val_mse: 0.0459
+
+Epoch 00028: val_mse did not improve from 0.04560
+Epoch 29/200
+ - 60s - loss: 0.0361 - mse: 0.0361 - val_loss: 0.0466 - val_mse: 0.0466
+
+Epoch 00029: val_mse did not improve from 0.04560
+Epoch 30/200
+ - 58s - loss: 0.0357 - mse: 0.0357 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00030: val_mse did not improve from 0.04560
+Epoch 31/200
+ - 59s - loss: 0.0359 - mse: 0.0359 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00031: val_mse did not improve from 0.04560
+Epoch 32/200
+ - 59s - loss: 0.0353 - mse: 0.0353 - val_loss: 0.0475 - val_mse: 0.0475
+Restoring model weights from the end of the best epoch
+
+Epoch 00032: val_mse did not improve from 0.04560
+Epoch 00032: early stopping
+r2_arousal:  0.5257486165170703
+r2_valence:  0.26667555270729426
+r2_overall:  0.3962120846121846
+mse_arousal:  0.0407443982852811
+mse_valence:  0.0362280289726957
+mse_overall:  0.0384862136289883
+rmse_arousal:  0.20185241709050972
+rmse_valence:  0.190336620156752
+rmse_overall:  0.19617903463160455
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 15:56:55.055488: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 15:56:55.127198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 15:56:55.127503: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:56:55.128875: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:56:55.129862: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 15:56:55.130106: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 15:56:55.131345: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 15:56:55.132261: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 15:56:55.135050: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 15:56:55.137782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 15:56:55.138105: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 15:56:55.165642: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 15:56:55.166684: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x563e487920b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 15:56:55.166724: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 15:56:55.169208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 15:56:55.169285: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:56:55.169313: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:56:55.169340: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 15:56:55.169364: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 15:56:55.169389: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 15:56:55.169414: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 15:56:55.169439: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 15:56:55.180072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 15:56:55.180170: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 15:56:55.341169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 15:56:55.341204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 15:56:55.341218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 15:56:55.349637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 15:56:55.351316: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x563e4d019f90 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 15:56:55.351338: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 15:56:57.878947: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 15:56:58.185319: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  5
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 61s - loss: 0.1658 - mse: 0.0564 - val_loss: 0.0556 - val_mse: 0.0532
+
+Epoch 00001: val_mse improved from inf to 0.05319, saving model to fold_5_my.hdf5
+Epoch 2/200
+ - 59s - loss: 0.0573 - mse: 0.0535 - val_loss: 0.0543 - val_mse: 0.0539
+
+Epoch 00002: val_mse did not improve from 0.05319
+Epoch 3/200
+ - 58s - loss: 0.0533 - mse: 0.0520 - val_loss: 0.0525 - val_mse: 0.0523
+
+Epoch 00003: val_mse improved from 0.05319 to 0.05234, saving model to fold_5_my.hdf5
+Epoch 4/200
+ - 59s - loss: 0.0533 - mse: 0.0528 - val_loss: 0.0532 - val_mse: 0.0531
+
+Epoch 00004: val_mse did not improve from 0.05234
+Epoch 5/200
+ - 59s - loss: 0.0501 - mse: 0.0498 - val_loss: 0.0512 - val_mse: 0.0511
+
+Epoch 00005: val_mse improved from 0.05234 to 0.05115, saving model to fold_5_my.hdf5
+Epoch 6/200
+ - 59s - loss: 0.0508 - mse: 0.0507 - val_loss: 0.0513 - val_mse: 0.0513
+
+Epoch 00006: val_mse did not improve from 0.05115
+Epoch 7/200
+ - 59s - loss: 0.0491 - mse: 0.0491 - val_loss: 0.0497 - val_mse: 0.0497
+
+Epoch 00007: val_mse improved from 0.05115 to 0.04973, saving model to fold_5_my.hdf5
+Epoch 8/200
+ - 60s - loss: 0.0476 - mse: 0.0475 - val_loss: 0.0505 - val_mse: 0.0505
+
+Epoch 00008: val_mse did not improve from 0.04973
+Epoch 9/200
+ - 58s - loss: 0.0462 - mse: 0.0462 - val_loss: 0.0494 - val_mse: 0.0494
+
+Epoch 00009: val_mse improved from 0.04973 to 0.04943, saving model to fold_5_my.hdf5
+Epoch 10/200
+ - 59s - loss: 0.0450 - mse: 0.0450 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00010: val_mse improved from 0.04943 to 0.04850, saving model to fold_5_my.hdf5
+Epoch 11/200
+ - 59s - loss: 0.0467 - mse: 0.0467 - val_loss: 0.0464 - val_mse: 0.0464
+
+Epoch 00011: val_mse improved from 0.04850 to 0.04639, saving model to fold_5_my.hdf5
+Epoch 12/200
+ - 59s - loss: 0.0435 - mse: 0.0435 - val_loss: 0.0478 - val_mse: 0.0478
+
+Epoch 00012: val_mse did not improve from 0.04639
+Epoch 13/200
+ - 59s - loss: 0.0423 - mse: 0.0423 - val_loss: 0.0462 - val_mse: 0.0462
+
+Epoch 00013: val_mse improved from 0.04639 to 0.04618, saving model to fold_5_my.hdf5
+Epoch 14/200
+ - 59s - loss: 0.0417 - mse: 0.0417 - val_loss: 0.0476 - val_mse: 0.0476
+
+Epoch 00014: val_mse did not improve from 0.04618
+Epoch 15/200
+ - 59s - loss: 0.0408 - mse: 0.0408 - val_loss: 0.0494 - val_mse: 0.0494
+
+Epoch 00015: val_mse did not improve from 0.04618
+Epoch 16/200
+ - 59s - loss: 0.0401 - mse: 0.0401 - val_loss: 0.0482 - val_mse: 0.0482
+
+Epoch 00016: val_mse did not improve from 0.04618
+Epoch 17/200
+ - 59s - loss: 0.0397 - mse: 0.0397 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00017: val_mse did not improve from 0.04618
+Epoch 18/200
+ - 59s - loss: 0.0393 - mse: 0.0393 - val_loss: 0.0497 - val_mse: 0.0497
+
+Epoch 00018: val_mse did not improve from 0.04618
+Epoch 19/200
+ - 60s - loss: 0.0389 - mse: 0.0389 - val_loss: 0.0479 - val_mse: 0.0479
+
+Epoch 00019: val_mse did not improve from 0.04618
+Epoch 20/200
+ - 59s - loss: 0.0383 - mse: 0.0383 - val_loss: 0.0462 - val_mse: 0.0462
+
+Epoch 00020: val_mse did not improve from 0.04618
+Epoch 21/200
+ - 58s - loss: 0.0378 - mse: 0.0378 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00021: val_mse did not improve from 0.04618
+Epoch 22/200
+ - 59s - loss: 0.0374 - mse: 0.0374 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00022: val_mse did not improve from 0.04618
+Epoch 23/200
+ - 59s - loss: 0.0370 - mse: 0.0370 - val_loss: 0.0476 - val_mse: 0.0476
+Restoring model weights from the end of the best epoch
+
+Epoch 00023: val_mse did not improve from 0.04618
+Epoch 00023: early stopping
+r2_arousal:  0.3855716929232038
+r2_valence:  0.11037957185280023
+r2_overall:  0.2479756323880022
+mse_arousal:  0.03839620966756175
+mse_valence:  0.04576775640645707
+mse_overall:  0.04208198303700947
+rmse_arousal:  0.1959495079543752
+rmse_valence:  0.2139340001179267
+rmse_overall:  0.20513893593613444
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 16:19:51.036938: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 16:19:51.092116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 16:19:51.092411: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:19:51.094057: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:19:51.095519: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 16:19:51.095907: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 16:19:51.097847: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 16:19:51.099398: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 16:19:51.104041: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 16:19:51.111444: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 16:19:51.111899: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 16:19:51.137625: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 16:19:51.138377: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f89d4f10b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 16:19:51.138406: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 16:19:51.140438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 16:19:51.140512: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:19:51.140529: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:19:51.140544: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 16:19:51.140559: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 16:19:51.140574: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 16:19:51.140589: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 16:19:51.140605: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 16:19:51.144105: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 16:19:51.144150: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:19:51.295990: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 16:19:51.296037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 16:19:51.296055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 16:19:51.301900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 16:19:51.304086: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f8a1d7a790 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 16:19:51.304116: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 16:19:53.879567: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:19:54.128342: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  6
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 61s - loss: 0.1333 - mse: 0.0561 - val_loss: 0.0544 - val_mse: 0.0528
+
+Epoch 00001: val_mse improved from inf to 0.05281, saving model to fold_6_my.hdf5
+Epoch 2/200
+ - 59s - loss: 0.0574 - mse: 0.0523 - val_loss: 0.0549 - val_mse: 0.0545
+
+Epoch 00002: val_mse did not improve from 0.05281
+Epoch 3/200
+ - 58s - loss: 0.0536 - mse: 0.0518 - val_loss: 0.0566 - val_mse: 0.0565
+
+Epoch 00003: val_mse did not improve from 0.05281
+Epoch 4/200
+ - 58s - loss: 0.0535 - mse: 0.0528 - val_loss: 0.0564 - val_mse: 0.0563
+
+Epoch 00004: val_mse did not improve from 0.05281
+Epoch 5/200
+ - 58s - loss: 0.0531 - mse: 0.0528 - val_loss: 0.0556 - val_mse: 0.0555
+
+Epoch 00005: val_mse did not improve from 0.05281
+Epoch 6/200
+ - 58s - loss: 0.0501 - mse: 0.0500 - val_loss: 0.0545 - val_mse: 0.0545
+
+Epoch 00006: val_mse did not improve from 0.05281
+Epoch 7/200
+ - 60s - loss: 0.0488 - mse: 0.0487 - val_loss: 0.0553 - val_mse: 0.0553
+
+Epoch 00007: val_mse did not improve from 0.05281
+Epoch 8/200
+ - 58s - loss: 0.0551 - mse: 0.0551 - val_loss: 0.0541 - val_mse: 0.0541
+
+Epoch 00008: val_mse did not improve from 0.05281
+Epoch 9/200
+ - 58s - loss: 0.0505 - mse: 0.0504 - val_loss: 0.0527 - val_mse: 0.0527
+
+Epoch 00009: val_mse improved from 0.05281 to 0.05267, saving model to fold_6_my.hdf5
+Epoch 10/200
+ - 58s - loss: 0.0476 - mse: 0.0476 - val_loss: 0.0501 - val_mse: 0.0501
+
+Epoch 00010: val_mse improved from 0.05267 to 0.05011, saving model to fold_6_my.hdf5
+Epoch 11/200
+ - 59s - loss: 0.0469 - mse: 0.0469 - val_loss: 0.0506 - val_mse: 0.0506
+
+Epoch 00011: val_mse did not improve from 0.05011
+Epoch 12/200
+ - 58s - loss: 0.0465 - mse: 0.0465 - val_loss: 0.0505 - val_mse: 0.0505
+
+Epoch 00012: val_mse did not improve from 0.05011
+Epoch 13/200
+ - 58s - loss: 0.0471 - mse: 0.0471 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00013: val_mse improved from 0.05011 to 0.04924, saving model to fold_6_my.hdf5
+Epoch 14/200
+ - 58s - loss: 0.0454 - mse: 0.0454 - val_loss: 0.0486 - val_mse: 0.0486
+
+Epoch 00014: val_mse improved from 0.04924 to 0.04858, saving model to fold_6_my.hdf5
+Epoch 15/200
+ - 59s - loss: 0.0447 - mse: 0.0447 - val_loss: 0.0485 - val_mse: 0.0485
+
+Epoch 00015: val_mse improved from 0.04858 to 0.04853, saving model to fold_6_my.hdf5
+Epoch 16/200
+ - 58s - loss: 0.0448 - mse: 0.0448 - val_loss: 0.0490 - val_mse: 0.0490
+
+Epoch 00016: val_mse did not improve from 0.04853
+Epoch 17/200
+ - 59s - loss: 0.0437 - mse: 0.0437 - val_loss: 0.0478 - val_mse: 0.0478
+
+Epoch 00017: val_mse improved from 0.04853 to 0.04777, saving model to fold_6_my.hdf5
+Epoch 18/200
+ - 58s - loss: 0.0431 - mse: 0.0431 - val_loss: 0.0488 - val_mse: 0.0488
+
+Epoch 00018: val_mse did not improve from 0.04777
+Epoch 19/200
+ - 58s - loss: 0.0427 - mse: 0.0427 - val_loss: 0.0469 - val_mse: 0.0469
+
+Epoch 00019: val_mse improved from 0.04777 to 0.04686, saving model to fold_6_my.hdf5
+Epoch 20/200
+ - 54s - loss: 0.0418 - mse: 0.0418 - val_loss: 0.0470 - val_mse: 0.0470
+
+Epoch 00020: val_mse did not improve from 0.04686
+Epoch 21/200
+ - 54s - loss: 0.0414 - mse: 0.0414 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00021: val_mse did not improve from 0.04686
+Epoch 22/200
+ - 55s - loss: 0.0422 - mse: 0.0422 - val_loss: 0.0502 - val_mse: 0.0502
+
+Epoch 00022: val_mse did not improve from 0.04686
+Epoch 23/200
+ - 54s - loss: 0.0419 - mse: 0.0419 - val_loss: 0.0486 - val_mse: 0.0486
+
+Epoch 00023: val_mse did not improve from 0.04686
+Epoch 24/200
+ - 54s - loss: 0.0423 - mse: 0.0423 - val_loss: 0.0480 - val_mse: 0.0480
+
+Epoch 00024: val_mse did not improve from 0.04686
+Epoch 25/200
+ - 54s - loss: 0.0403 - mse: 0.0403 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00025: val_mse did not improve from 0.04686
+Epoch 26/200
+ - 54s - loss: 0.0425 - mse: 0.0425 - val_loss: 0.0478 - val_mse: 0.0478
+
+Epoch 00026: val_mse did not improve from 0.04686
+Epoch 27/200
+ - 55s - loss: 0.0404 - mse: 0.0404 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00027: val_mse did not improve from 0.04686
+Epoch 28/200
+ - 54s - loss: 0.0393 - mse: 0.0393 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00028: val_mse did not improve from 0.04686
+Epoch 29/200
+ - 54s - loss: 0.0387 - mse: 0.0387 - val_loss: 0.0485 - val_mse: 0.0485
+Restoring model weights from the end of the best epoch
+
+Epoch 00029: val_mse did not improve from 0.04686
+Epoch 00029: early stopping
+r2_arousal:  0.4257108587560987
+r2_valence:  0.150478126254719
+r2_overall:  0.2880944925054098
+mse_arousal:  0.05762269001195393
+mse_valence:  0.05172570803075405
+mse_overall:  0.05467419902135397
+rmse_arousal:  0.2400472662038748
+rmse_valence:  0.22743286488710035
+rmse_overall:  0.2338251462553888
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 16:47:39.269291: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 16:47:39.308675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 16:47:39.308864: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:47:39.309955: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:47:39.310932: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 16:47:39.311180: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 16:47:39.312380: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 16:47:39.313292: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 16:47:39.316138: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 16:47:39.318846: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 16:47:39.319154: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 16:47:39.349905: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 16:47:39.351713: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55aff00a00b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 16:47:39.351761: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 16:47:39.354544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 16:47:39.354614: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:47:39.354642: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:47:39.354667: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 16:47:39.354692: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 16:47:39.354717: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 16:47:39.354741: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 16:47:39.354766: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 16:47:39.359789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 16:47:39.359859: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 16:47:39.473938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 16:47:39.474001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 16:47:39.474018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 16:47:39.481018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 16:47:39.483983: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55aff4928680 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 16:47:39.484027: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 16:47:41.179459: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 16:47:41.372737: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  7
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 56s - loss: 0.1984 - mse: 0.0571 - val_loss: 0.0567 - val_mse: 0.0530
+
+Epoch 00001: val_mse improved from inf to 0.05304, saving model to fold_7_my.hdf5
+Epoch 2/200
+ - 55s - loss: 0.0628 - mse: 0.0536 - val_loss: 0.0531 - val_mse: 0.0522
+
+Epoch 00002: val_mse improved from 0.05304 to 0.05219, saving model to fold_7_my.hdf5
+Epoch 3/200
+ - 54s - loss: 0.0557 - mse: 0.0522 - val_loss: 0.0530 - val_mse: 0.0527
+
+Epoch 00003: val_mse did not improve from 0.05219
+Epoch 4/200
+ - 54s - loss: 0.0524 - mse: 0.0510 - val_loss: 0.0524 - val_mse: 0.0523
+
+Epoch 00004: val_mse did not improve from 0.05219
+Epoch 5/200
+ - 55s - loss: 0.0504 - mse: 0.0499 - val_loss: 0.0520 - val_mse: 0.0520
+
+Epoch 00005: val_mse improved from 0.05219 to 0.05199, saving model to fold_7_my.hdf5
+Epoch 6/200
+ - 55s - loss: 0.0485 - mse: 0.0482 - val_loss: 0.0477 - val_mse: 0.0477
+
+Epoch 00006: val_mse improved from 0.05199 to 0.04771, saving model to fold_7_my.hdf5
+Epoch 7/200
+ - 55s - loss: 0.0490 - mse: 0.0489 - val_loss: 0.0553 - val_mse: 0.0553
+
+Epoch 00007: val_mse did not improve from 0.04771
+Epoch 8/200
+ - 54s - loss: 0.0477 - mse: 0.0477 - val_loss: 0.0472 - val_mse: 0.0472
+
+Epoch 00008: val_mse improved from 0.04771 to 0.04722, saving model to fold_7_my.hdf5
+Epoch 9/200
+ - 55s - loss: 0.0456 - mse: 0.0456 - val_loss: 0.0458 - val_mse: 0.0458
+
+Epoch 00009: val_mse improved from 0.04722 to 0.04582, saving model to fold_7_my.hdf5
+Epoch 10/200
+ - 55s - loss: 0.0448 - mse: 0.0447 - val_loss: 0.0459 - val_mse: 0.0459
+
+Epoch 00010: val_mse did not improve from 0.04582
+Epoch 11/200
+ - 54s - loss: 0.0442 - mse: 0.0442 - val_loss: 0.0455 - val_mse: 0.0455
+
+Epoch 00011: val_mse improved from 0.04582 to 0.04554, saving model to fold_7_my.hdf5
+Epoch 12/200
+ - 54s - loss: 0.0434 - mse: 0.0434 - val_loss: 0.0482 - val_mse: 0.0482
+
+Epoch 00012: val_mse did not improve from 0.04554
+Epoch 13/200
+ - 55s - loss: 0.0426 - mse: 0.0426 - val_loss: 0.0461 - val_mse: 0.0461
+
+Epoch 00013: val_mse did not improve from 0.04554
+Epoch 14/200
+ - 55s - loss: 0.0458 - mse: 0.0458 - val_loss: 0.0571 - val_mse: 0.0571
+
+Epoch 00014: val_mse did not improve from 0.04554
+Epoch 15/200
+ - 54s - loss: 0.0495 - mse: 0.0495 - val_loss: 0.0507 - val_mse: 0.0507
+
+Epoch 00015: val_mse did not improve from 0.04554
+Epoch 16/200
+ - 56s - loss: 0.0458 - mse: 0.0458 - val_loss: 0.0473 - val_mse: 0.0473
+
+Epoch 00016: val_mse did not improve from 0.04554
+Epoch 17/200
+ - 54s - loss: 0.0434 - mse: 0.0434 - val_loss: 0.0477 - val_mse: 0.0477
+
+Epoch 00017: val_mse did not improve from 0.04554
+Epoch 18/200
+ - 54s - loss: 0.0423 - mse: 0.0423 - val_loss: 0.0468 - val_mse: 0.0468
+
+Epoch 00018: val_mse did not improve from 0.04554
+Epoch 19/200
+ - 54s - loss: 0.0437 - mse: 0.0437 - val_loss: 0.0483 - val_mse: 0.0483
+
+Epoch 00019: val_mse did not improve from 0.04554
+Epoch 20/200
+ - 55s - loss: 0.0431 - mse: 0.0431 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00020: val_mse did not improve from 0.04554
+Epoch 21/200
+ - 54s - loss: 0.0417 - mse: 0.0417 - val_loss: 0.0461 - val_mse: 0.0461
+Restoring model weights from the end of the best epoch
+
+Epoch 00021: val_mse did not improve from 0.04554
+Epoch 00021: early stopping
+r2_arousal:  0.3888845018650201
+r2_valence:  0.18202787734419468
+r2_overall:  0.28545618960460745
+mse_arousal:  0.0412068767293608
+mse_valence:  0.04612979564248523
+mse_overall:  0.04366833618592303
+rmse_arousal:  0.2029947702019951
+rmse_valence:  0.21477848039895717
+rmse_overall:  0.20896970159791833
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 17:06:59.569443: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 17:06:59.608458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 17:06:59.608659: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:06:59.609710: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:06:59.610659: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 17:06:59.610901: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 17:06:59.612110: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 17:06:59.612983: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 17:06:59.615697: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 17:06:59.618316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 17:06:59.618620: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 17:06:59.649846: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 17:06:59.651567: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55bfd5e120b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 17:06:59.651626: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 17:06:59.654427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 17:06:59.654496: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:06:59.654524: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:06:59.654549: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 17:06:59.654574: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 17:06:59.654599: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 17:06:59.654624: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 17:06:59.654648: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 17:06:59.659665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 17:06:59.659732: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:06:59.775058: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 17:06:59.775091: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 17:06:59.775097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 17:06:59.778267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 17:06:59.779684: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55bfda69b310 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 17:06:59.779702: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 17:07:01.466189: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:07:01.642434: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  8
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 56s - loss: 0.1435 - mse: 0.0570 - val_loss: 0.0562 - val_mse: 0.0531
+
+Epoch 00001: val_mse improved from inf to 0.05308, saving model to fold_8_my.hdf5
+Epoch 2/200
+ - 55s - loss: 0.0571 - mse: 0.0534 - val_loss: 0.0520 - val_mse: 0.0512
+
+Epoch 00002: val_mse improved from 0.05308 to 0.05123, saving model to fold_8_my.hdf5
+Epoch 3/200
+ - 55s - loss: 0.0522 - mse: 0.0510 - val_loss: 0.0525 - val_mse: 0.0521
+
+Epoch 00003: val_mse did not improve from 0.05123
+Epoch 4/200
+ - 55s - loss: 0.0503 - mse: 0.0498 - val_loss: 0.0529 - val_mse: 0.0527
+
+Epoch 00004: val_mse did not improve from 0.05123
+Epoch 5/200
+ - 55s - loss: 0.0495 - mse: 0.0492 - val_loss: 0.0550 - val_mse: 0.0549
+
+Epoch 00005: val_mse did not improve from 0.05123
+Epoch 6/200
+ - 55s - loss: 0.0502 - mse: 0.0500 - val_loss: 0.0572 - val_mse: 0.0571
+
+Epoch 00006: val_mse did not improve from 0.05123
+Epoch 7/200
+ - 54s - loss: 0.0488 - mse: 0.0487 - val_loss: 0.0640 - val_mse: 0.0640
+
+Epoch 00007: val_mse did not improve from 0.05123
+Epoch 8/200
+ - 55s - loss: 0.0497 - mse: 0.0496 - val_loss: 0.0504 - val_mse: 0.0504
+
+Epoch 00008: val_mse improved from 0.05123 to 0.05036, saving model to fold_8_my.hdf5
+Epoch 9/200
+ - 56s - loss: 0.0486 - mse: 0.0486 - val_loss: 0.0491 - val_mse: 0.0491
+
+Epoch 00009: val_mse improved from 0.05036 to 0.04907, saving model to fold_8_my.hdf5
+Epoch 10/200
+ - 54s - loss: 0.0472 - mse: 0.0472 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00010: val_mse did not improve from 0.04907
+Epoch 11/200
+ - 55s - loss: 0.0463 - mse: 0.0463 - val_loss: 0.0486 - val_mse: 0.0486
+
+Epoch 00011: val_mse improved from 0.04907 to 0.04855, saving model to fold_8_my.hdf5
+Epoch 12/200
+ - 55s - loss: 0.0469 - mse: 0.0469 - val_loss: 0.0502 - val_mse: 0.0502
+
+Epoch 00012: val_mse did not improve from 0.04855
+Epoch 13/200
+ - 56s - loss: 0.0475 - mse: 0.0475 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00013: val_mse did not improve from 0.04855
+Epoch 14/200
+ - 55s - loss: 0.0462 - mse: 0.0462 - val_loss: 0.0490 - val_mse: 0.0490
+
+Epoch 00014: val_mse did not improve from 0.04855
+Epoch 15/200
+ - 55s - loss: 0.0456 - mse: 0.0456 - val_loss: 0.0493 - val_mse: 0.0493
+
+Epoch 00015: val_mse did not improve from 0.04855
+Epoch 16/200
+ - 55s - loss: 0.0454 - mse: 0.0454 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00016: val_mse improved from 0.04855 to 0.04837, saving model to fold_8_my.hdf5
+Epoch 17/200
+ - 55s - loss: 0.0437 - mse: 0.0437 - val_loss: 0.0494 - val_mse: 0.0494
+
+Epoch 00017: val_mse did not improve from 0.04837
+Epoch 18/200
+ - 54s - loss: 0.0430 - mse: 0.0430 - val_loss: 0.0487 - val_mse: 0.0487
+
+Epoch 00018: val_mse did not improve from 0.04837
+Epoch 19/200
+ - 55s - loss: 0.0420 - mse: 0.0420 - val_loss: 0.0473 - val_mse: 0.0473
+
+Epoch 00019: val_mse improved from 0.04837 to 0.04731, saving model to fold_8_my.hdf5
+Epoch 20/200
+ - 55s - loss: 0.0418 - mse: 0.0418 - val_loss: 0.0487 - val_mse: 0.0487
+
+Epoch 00020: val_mse did not improve from 0.04731
+Epoch 21/200
+ - 55s - loss: 0.0419 - mse: 0.0419 - val_loss: 0.0475 - val_mse: 0.0475
+
+Epoch 00021: val_mse did not improve from 0.04731
+Epoch 22/200
+ - 55s - loss: 0.0428 - mse: 0.0428 - val_loss: 0.0556 - val_mse: 0.0554
+
+Epoch 00022: val_mse did not improve from 0.04731
+Epoch 23/200
+ - 55s - loss: 0.0459 - mse: 0.0459 - val_loss: 0.0539 - val_mse: 0.0539
+
+Epoch 00023: val_mse did not improve from 0.04731
+Epoch 24/200
+ - 55s - loss: 0.0448 - mse: 0.0448 - val_loss: 0.0478 - val_mse: 0.0478
+
+Epoch 00024: val_mse did not improve from 0.04731
+Epoch 25/200
+ - 55s - loss: 0.0427 - mse: 0.0427 - val_loss: 0.0492 - val_mse: 0.0492
+
+Epoch 00025: val_mse did not improve from 0.04731
+Epoch 26/200
+ - 55s - loss: 0.0417 - mse: 0.0416 - val_loss: 0.0473 - val_mse: 0.0473
+
+Epoch 00026: val_mse did not improve from 0.04731
+Epoch 27/200
+ - 55s - loss: 0.0410 - mse: 0.0410 - val_loss: 0.0479 - val_mse: 0.0479
+
+Epoch 00027: val_mse did not improve from 0.04731
+Epoch 28/200
+ - 55s - loss: 0.0407 - mse: 0.0407 - val_loss: 0.0489 - val_mse: 0.0489
+
+Epoch 00028: val_mse did not improve from 0.04731
+Epoch 29/200
+ - 55s - loss: 0.0399 - mse: 0.0399 - val_loss: 0.0487 - val_mse: 0.0487
+Restoring model weights from the end of the best epoch
+
+Epoch 00029: val_mse did not improve from 0.04731
+Epoch 00029: early stopping
+r2_arousal:  0.5272935578381805
+r2_valence:  0.1723127413311243
+r2_overall:  0.34980314958465214
+mse_arousal:  0.042085801305827356
+mse_valence:  0.03905222235139125
+mse_overall:  0.040569011828609336
+rmse_arousal:  0.2051482422684322
+rmse_valence:  0.19761635142718137
+rmse_overall:  0.20141750626151972
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2020-04-13 17:33:45.964208: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-04-13 17:33:46.005612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 17:33:46.005799: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:33:46.006845: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:33:46.007773: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 17:33:46.008017: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 17:33:46.009182: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 17:33:46.010059: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 17:33:46.012704: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 17:33:46.015365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 17:33:46.015669: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-04-13 17:33:46.037813: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3300000000 Hz
+2020-04-13 17:33:46.039265: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x559c338830b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-04-13 17:33:46.039329: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-04-13 17:33:46.042193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:1a:00.0
+2020-04-13 17:33:46.042265: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:33:46.042293: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:33:46.042319: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-04-13 17:33:46.042344: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-04-13 17:33:46.042369: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-13 17:33:46.042394: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-13 17:33:46.042419: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-04-13 17:33:46.047464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-04-13 17:33:46.047530: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-04-13 17:33:46.164305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-13 17:33:46.164342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-04-13 17:33:46.164348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-04-13 17:33:46.167556: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10481 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+2020-04-13 17:33:46.169074: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x559c3810cc30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-04-13 17:33:46.169095: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+WARNING:tensorflow:From /home/wequ0318/anaconda3/envs/keras/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-04-13 17:33:47.906949: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-04-13 17:33:48.089082: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+using my model
+running on fold  9
+Model: "model_1"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 22050, 1)     0                                            
+__________________________________________________________________________________________________
+fConv1 (Conv1D)                 (None, 2757, 8)      264         input_1[0][0]                    
+__________________________________________________________________________________________________
+cConv1 (Conv1D)                 (None, 690, 8)       1032        input_1[0][0]                    
+__________________________________________________________________________________________________
+batch_normalization_1 (BatchNor (None, 2757, 8)      32          fConv1[0][0]                     
+__________________________________________________________________________________________________
+batch_normalization_2 (BatchNor (None, 690, 8)       32          cConv1[0][0]                     
+__________________________________________________________________________________________________
+fMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_1[0][0]      
+__________________________________________________________________________________________________
+cMaxP1 (MaxPooling1D)           (None, 345, 8)       0           batch_normalization_2[0][0]      
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 345, 8)       0           fMaxP1[0][0]                     
+                                                                 cMaxP1[0][0]                     
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 345, 8)       0           add_1[0][0]                      
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, 345, 64)      10752       dropout_1[0][0]                  
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, 64)           25088       bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 64)           0           bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 2)            130         dropout_2[0][0]                  
+==================================================================================================
+Total params: 37,330
+Trainable params: 37,298
+Non-trainable params: 32
+__________________________________________________________________________________________________
+Train on 33900 samples, validate on 4200 samples
+Epoch 1/200
+ - 56s - loss: 0.1253 - mse: 0.0555 - val_loss: 0.0554 - val_mse: 0.0540
+
+Epoch 00001: val_mse improved from inf to 0.05399, saving model to fold_9_my.hdf5
+Epoch 2/200
+ - 54s - loss: 0.0566 - mse: 0.0529 - val_loss: 0.0831 - val_mse: 0.0828
+
+Epoch 00002: val_mse did not improve from 0.05399
+Epoch 3/200
+ - 55s - loss: 0.0572 - mse: 0.0559 - val_loss: 0.0625 - val_mse: 0.0624
+
+Epoch 00003: val_mse did not improve from 0.05399
+Epoch 4/200
+ - 55s - loss: 0.0523 - mse: 0.0518 - val_loss: 0.0520 - val_mse: 0.0520
+
+Epoch 00004: val_mse improved from 0.05399 to 0.05197, saving model to fold_9_my.hdf5
+Epoch 5/200
+ - 54s - loss: 0.0505 - mse: 0.0503 - val_loss: 0.0554 - val_mse: 0.0554
+
+Epoch 00005: val_mse did not improve from 0.05197
+Epoch 6/200
+ - 55s - loss: 0.0530 - mse: 0.0530 - val_loss: 0.0528 - val_mse: 0.0528
+
+Epoch 00006: val_mse did not improve from 0.05197
+Epoch 7/200
+ - 54s - loss: 0.0504 - mse: 0.0503 - val_loss: 0.0509 - val_mse: 0.0509
+
+Epoch 00007: val_mse improved from 0.05197 to 0.05088, saving model to fold_9_my.hdf5
+Epoch 8/200
+ - 55s - loss: 0.0483 - mse: 0.0483 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00008: val_mse improved from 0.05088 to 0.04839, saving model to fold_9_my.hdf5
+Epoch 9/200
+ - 55s - loss: 0.0467 - mse: 0.0467 - val_loss: 0.0494 - val_mse: 0.0494
+
+Epoch 00009: val_mse did not improve from 0.04839
+Epoch 10/200
+ - 56s - loss: 0.0454 - mse: 0.0454 - val_loss: 0.0520 - val_mse: 0.0520
+
+Epoch 00010: val_mse did not improve from 0.04839
+Epoch 11/200
+ - 54s - loss: 0.0437 - mse: 0.0437 - val_loss: 0.0493 - val_mse: 0.0493
+
+Epoch 00011: val_mse did not improve from 0.04839
+Epoch 12/200
+ - 55s - loss: 0.0432 - mse: 0.0432 - val_loss: 0.0510 - val_mse: 0.0510
+
+Epoch 00012: val_mse did not improve from 0.04839
+Epoch 13/200
+ - 55s - loss: 0.0430 - mse: 0.0430 - val_loss: 0.0510 - val_mse: 0.0510
+
+Epoch 00013: val_mse did not improve from 0.04839
+Epoch 14/200
+ - 55s - loss: 0.0420 - mse: 0.0420 - val_loss: 0.0484 - val_mse: 0.0484
+
+Epoch 00014: val_mse improved from 0.04839 to 0.04836, saving model to fold_9_my.hdf5
+Epoch 15/200
+ - 55s - loss: 0.0414 - mse: 0.0414 - val_loss: 0.0470 - val_mse: 0.0470
+
+Epoch 00015: val_mse improved from 0.04836 to 0.04701, saving model to fold_9_my.hdf5
+Epoch 16/200
+ - 55s - loss: 0.0406 - mse: 0.0406 - val_loss: 0.0479 - val_mse: 0.0479
+
+Epoch 00016: val_mse did not improve from 0.04701
+Epoch 17/200
+ - 54s - loss: 0.0407 - mse: 0.0407 - val_loss: 0.0538 - val_mse: 0.0538
+
+Epoch 00017: val_mse did not improve from 0.04701
+Epoch 18/200
+ - 55s - loss: 0.0411 - mse: 0.0411 - val_loss: 0.0486 - val_mse: 0.0486
+
+Epoch 00018: val_mse did not improve from 0.04701
+Epoch 19/200
+ - 54s - loss: 0.0395 - mse: 0.0395 - val_loss: 0.0471 - val_mse: 0.0471
+
+Epoch 00019: val_mse did not improve from 0.04701
+Epoch 20/200
+ - 55s - loss: 0.0389 - mse: 0.0389 - val_loss: 0.0474 - val_mse: 0.0474
+
+Epoch 00020: val_mse did not improve from 0.04701
+Epoch 21/200
+ - 55s - loss: 0.0385 - mse: 0.0385 - val_loss: 0.0477 - val_mse: 0.0477
+
+Epoch 00021: val_mse did not improve from 0.04701
+Epoch 22/200
+ - 55s - loss: 0.0382 - mse: 0.0382 - val_loss: 0.0487 - val_mse: 0.0487
+
+Epoch 00022: val_mse did not improve from 0.04701
+Epoch 23/200
+ - 55s - loss: 0.0392 - mse: 0.0392 - val_loss: 0.0657 - val_mse: 0.0657
+
+Epoch 00023: val_mse did not improve from 0.04701
+Epoch 24/200
+ - 55s - loss: 0.0447 - mse: 0.0447 - val_loss: 0.0513 - val_mse: 0.0513
+
+Epoch 00024: val_mse did not improve from 0.04701
+Epoch 25/200
+ - 55s - loss: 0.0428 - mse: 0.0428 - val_loss: 0.0533 - val_mse: 0.0533
+Restoring model weights from the end of the best epoch
+
+Epoch 00025: val_mse did not improve from 0.04701
+Epoch 00025: early stopping
+r2_arousal:  0.4919189537391454
+r2_valence:  0.16507859103380795
+r2_overall:  0.32849877238647707
+mse_arousal:  0.04148552843034461
+mse_valence:  0.050699251688084354
+mse_overall:  0.04609239005921438
+rmse_arousal:  0.20367996570685248
+rmse_valence:  0.22516494329287665
+rmse_overall:  0.21469138329056053
